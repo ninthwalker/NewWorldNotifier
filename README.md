@@ -1,6 +1,6 @@
 # New World Notifier
 Sends a message when your New World World Server Queue has ended.  
-(Whether that means you entered the game, or it kicked you out)
+(Whether that means you entered the game, or it kicked you out)  
 Currently supports Discord, Telegram, Text Messages, Alexa 'Notify Me' Skill, Home Assistant scripts and Pushover (Thanks @pattont). If you want another notification type, let me know.    
   
   

@@ -31,7 +31,7 @@ After clicking the shortcut (Download Option One) or Launching the script from t
 3. ???
 4. Profit!  
   
-## Download Options  
+## Install Options  
 
 **Option One**  
  (Recommended - Easiest to use)
@@ -60,7 +60,7 @@ If you right click and edit the NewWorldNotifier.ps1 file you will see a section
 **Note: The only required setting to make this work is to set up one notification type.**  
 Currently supported Notification apps are: Discord, Telegram, Pushover, Text Messages, Home Assistant and the Alexa 'Notify Me' Skill.  
 
-### Required Setting:  
+### Required Settings:  
 At least one of the below notification types is required. Or you can set up all 5 if you want!  
 
 * **Discord**  

@@ -1,7 +1,6 @@
 <p align="center">
-<img align="center" src="https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierLogo.png">  
-<img align="center" src="https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierQuePopped.png">
-</p>  
+<img align="center" src="https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierLogo.png"></p>
+<img align="center" src="https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierQuePopped.png">   
 
 ## New World Notifier  
 Sends a message when your New World Server Queue has ended.  

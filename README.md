@@ -1,6 +1,7 @@
 <p align="center">
-<img align="center" src="https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierLogo.png"></p>
-<img src="https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierQuePopped.png">  
+<img align="center" src="https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierLogo.png">
+<img src="https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierQuePopped.png">
+</p>  
 
 ## New World Notifier  
 Sends a message when your New World Server Queue has ended.  
@@ -140,8 +141,8 @@ Default is 'Yes'
 
 <img src="https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierQuePopped.png">  
 
-![](https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierStart.png) ![](https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierRunning.png)  
+![](https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierStart.png) ![](https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierCoords.png)  
 
-![](https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierCoords.png) ![](https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierEnded.png)  
+![](https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierRunning.png) ![](https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierEnded.png)  
 
 ![](https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierScripts.png)  

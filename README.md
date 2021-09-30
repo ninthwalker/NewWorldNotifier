@@ -1,5 +1,5 @@
 <p align="center">
-<img align="center" src="https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierLogo.png">
+<img align="center" src="https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierLogo.png">  
 <img src="https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierQuePopped.png">
 </p>  
 

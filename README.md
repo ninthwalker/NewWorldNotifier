@@ -1,8 +1,8 @@
-# New World Notifier
-Sends a message when your New World World Server Queue has ended.  
-(Whether that means you entered the game, or it kicked you out)  
+<p align="center">
+<img align="center" src="https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierLogo.png"></p>
+<img src="https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierQuePopped.png"> 
+Sends a message when your New World Server Queue has ended.  
 Currently supports Discord, Telegram, Text Messages, Alexa 'Notify Me' Skill, Home Assistant scripts and Pushover (Thanks @pattont). If you want another notification type, let me know.    
-  
   
 Note: This does not interact with the game at any level or in any way.  
 Default settings should work for most people. Just set up at least one notification app and you are good to go!  
@@ -33,7 +33,7 @@ After clicking the shortcut (Download Option One) or Launching the script from t
 **Option One**  
  (Recommended - Easiest to use)
 
-1. Click the 'Clone or Download' link on this page. Then select 'Download Zip'  
+1. Click the 'Code' button on this page. Then select 'Download ZIP'  
 2 . You may need to 'unblock' the zip file downloaded. This is normal behavior for Microsoft Windows to do for files downloaded from the internet.  
 `Right click > Properties > Check 'Unblock'`
 3. Extract the contents of the ZIP file. You only need the 'NewWorldNotifier.lnk' shortcut, and the NewWorldNotifier.ps1 files. Make sure these 2 files are kept in the same directory wherever you move them to.  
@@ -122,7 +122,7 @@ By default it goes to your %temp% Directory.
 3. **Screenshot Delay**  
 If you would like to change how often the script scans the Queue Window you can enter a different time here in seconds.
 Note: this script uses hardly any resources and is very quick at the screenshot/OCR process.   
-Default Value: 60 seconds  
+Default Value: 30 seconds  
   
 4. **Stop on Queue**  
 'Yes' will stop the script when the Queue window is gone. 'No' will have it continue to scan and must be stopped manually.  
@@ -131,3 +131,15 @@ Default is 'Yes'
 ## FAQ/Common Issues  
 1. As noted above, this app is entirely legal/safe/conforms to all TOS of Amazon and New World. This does not touch the game or files in any way.  
 2. make sure you have double quotes around your app webhooks and most settings you configured in the script. ie: "webhook here"  
+3. If you use a different language setting other than English for your default windows language, this may not work, or will need script edits.  
+4. Remember that the Game window needs to be at the foreground of one of your monitors for this to work. Don't have another application or window covering the game.  
+
+## Screenshots  
+
+<img src="https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierQuePopped.png">  
+
+![](https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierStart.png) ![](https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierRunning.png)  
+
+![](https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierCoords.png) ![](https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierEnded.png)  
+
+![](https://raw.githubusercontent.com/ninthwalker/NewWorldNotifier/master/screenshots/NewWorldNotifierScripts.png)  

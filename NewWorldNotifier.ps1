@@ -407,7 +407,7 @@ function NewWorldNotifier {
     $form.MinimizeBox = $False # disable while running since it breaks things
     $script:label_coords_text.Visible = $False
     $label_help.Visible = $False
-    $label_status.ForeColor = "#7CFC00"
+    $label_status.ForeColor = "#FFFF00"
     $label_status.text = "Still In Queue ..."
     $label_status.Refresh()
 
@@ -541,7 +541,7 @@ function NewWorldNotifier {
     Send-Alert
     
     if ($stopOnQueue -eq "Yes") {
-        $label_status.ForeColor = "#FFFF00"
+        $label_status.ForeColor = "#7CFC00"
         $label_status.text = "Game Time!"
         $label_status.Refresh()
         $button_stop.Enabled = $False

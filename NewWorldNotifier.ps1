@@ -427,7 +427,10 @@ function NewWorldNotifier {
 
     :check Do {
         # check for clicks in the form since we are looping
-        Start-Sleep -Seconds 2 # Extra little sleep for queue updates to not do 2 posts in 1min.
+        
+        if ($queueUpdates) {
+            Start-Sleep -Seconds 5 # Extra little sleep for queue updates to not do 2 posts in 1min.
+        }
 
         for ($i=0; $i -lt $delay; $i++) {
 

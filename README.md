@@ -132,8 +132,7 @@ Default Value: 30 seconds
 Default is 'Yes'  
 
 5. **Queue Updates**  
-Get regular queue updates. Setting this to $True will send the screenshot to your discord webhook every 'time interval' so you can see your position in queue.  
-Helpful to know that the queue is still being monitored and makes it easy to check what position in queue you are.
+Get regular queue updates. Setting this to $True will send the screenshot to your discord webhook every 'time interval' so you can see your position in queue. Helpful to know that the queue is still being monitored and makes it easy to check what position in queue you are.  
 Default is $False  
 
 ## FAQ/Common Issues  

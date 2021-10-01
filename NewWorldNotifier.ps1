@@ -8,6 +8,10 @@
 #########################################################################
 
 ############################## CHANGE LOG ###############################
+## 1.1                                                                  #
+# Added Queue Updates option in Advanced Settings:                      #
+#  Sends screenshot of queue position to discord                        #
+#                                                                       #
 ## 1.0                                                                  #
 # Initial App version (Modified from my original BGNotifier)            #
 #########################################################################
@@ -106,6 +110,11 @@ $delay = 30
 # Default is 'Yes', stop scanning after it no longer detects the Queue window.
 $stopOnQueue = "Yes"
 
+# Get regular queue updates. Setting this to $True will send the screenshot to your discord webhook every 'time interval' so you can see your position in queue.
+# Note: This only works for Discord notifications. We send the screenshot, since the ocr in win10 has trouble reading the numbers that Amazon used for the font =(
+$queueUpdates = $False
+# interval in minutes to update you with the screenshot
+$timeInterval = 30
 
 #########################################
 ### DO NOT MODIFY ANYTHING BELOW THIS ###
@@ -418,6 +427,8 @@ function NewWorldNotifier {
 
     :check Do {
         # check for clicks in the form since we are looping
+        Start-Sleep -Seconds 1
+
         for ($i=0; $i -lt $delay; $i++) {
 
             [System.Windows.Forms.Application]::DoEvents()
@@ -439,27 +450,51 @@ function NewWorldNotifier {
 
         }
 
-        Get-NewWorldQueue
-        $NewWorldAlert = (Get-Ocr $path\NewWorldNotifier_Img.png).Text
-
         # Send interval alert if enabled
-        if ($queueCheck) {
+        if (($queueUpdates) -and (Test-Path $path\NewWorldNotifier_Img.png)) {
             $time = Get-Date -uformat "%M"
             if ($time%$timeInterval -eq 0) {
                 # get queue position
                 # it seems hard for the OCR to detect the number in the font they use =(
                 # Guess we can't do this after all. Leaving code in for now.
-                
-                if ($NewWorldAlert -match '(?<=)\d+') {
-                    $yourPos = $matches[0]
-                }
-                else {
-                    $yourPos = "Unknown"
-                }
-                $msg = "Your Position in Queue is: $yourPos"
-                Send-Alert
+                #if ($NewWorldAlert -match '(?<=)\d+') {
+                #    $yourPos = $matches[0]
+                #}
+                #else {
+                #    $yourPos = "Unknown"
+                #}
+                #$msg = "Your Position in Queue is: $yourPos"
+                #Send-Alert
+
+                # Decided instead to send the actual screenshot to discord for this since ocr didn't work for this game:
+                # if everyone had pwsh 7, this would be so much simpler with the bultin -Form. But for now, using the below for older powershell versions
+                # pwsh 7 would look like:
+                # pwsh -c "Invoke-RestMethod -Uri $discordWebHook -Method Post -Form @{file=Get-Item -Path "$path\NewWorldNotifier_Img.png";content='You are still in Queue:'}"
+
+                $fileBytes = [System.IO.File]::ReadAllBytes("$path\NewWorldNotifier_Img.png")
+                $fileEnc = [System.Text.Encoding]::GetEncoding('ISO-8859-1').GetString($fileBytes)
+                $boundary = [System.Guid]::NewGuid().ToString()
+                $LF = "`r`n";
+
+                $bodyLines = ( 
+                    "--$boundary",
+                    "Content-Disposition: form-data; name=`"file`"; filename=`"$path\NewWorldNotifier_Img.png`"",
+                    "Content-Type: application/octet-stream$LF",
+                    $fileEnc,
+                    "--$boundary",
+                    "Content-Disposition: form-data; name=`"content`"$LF",
+                    "You are still in Queue:$LF",    
+                    "--$boundary--$LF" 
+                ) -join $LF
+
+                Invoke-RestMethod -Uri $discordWebHook -Method Post -ContentType "multipart/form-data; boundary=$boundary" -Body $bodyLines
+
             }
         }
+
+        Get-NewWorldQueue
+        $NewWorldAlert = (Get-Ocr $path\NewWorldNotifier_Img.png).Text
+
     }
     Until ($NewWorldAlert -notlike "*POSITION*")
 

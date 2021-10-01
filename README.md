@@ -131,11 +131,15 @@ Default Value: 30 seconds
 'Yes' will stop the script when the Queue window is gone. 'No' will have it continue to scan and must be stopped manually.  
 Default is 'Yes'  
 
+5. **Queue Updates**  
+Get regular queue updates. Setting this to $True will send the screenshot to your discord webhook every 'time interval' so you can see your position in queue. Helpful to know that the queue is still being monitored and makes it easy to check what position in queue you are.  
+Default is $False  
+
 ## FAQ/Common Issues  
 1. As noted above, this app is entirely legal/safe/conforms to all TOS of Amazon and New World. This does not touch the game or files in any way.  
 2. make sure you have double quotes around your app webhooks and most settings you configured in the script. ie: "webhook here"  
 3. If you use a different language setting other than English for your default windows language, this may not work, or will need script edits.  
-4. Remember that the Game window needs to be at the foreground of one of your monitors for this to work. Don't have another application or window covering the game.  
+4. Remember that the Game window needs to be at the foreground of one of your monitors for this to work. Don't have another application or window covering the game. Screensaver will also mess things up. You can however turn your monitor off if you wish.  
 
 ## Screenshots  
 

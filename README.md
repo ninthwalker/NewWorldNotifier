@@ -139,7 +139,7 @@ Default is $False
 1. As noted above, this app is entirely legal/safe/conforms to all TOS of Amazon and New World. This does not touch the game or files in any way.  
 2. make sure you have double quotes around your app webhooks and most settings you configured in the script. ie: "webhook here"  
 3. If you use a different language setting other than English for your default windows language, this may not work, or will need script edits.  
-4. Remember that the Game window needs to be at the foreground of one of your monitors for this to work. Don't have another application or window covering the game.  
+4. Remember that the Game window needs to be at the foreground of one of your monitors for this to work. Don't have another application or window covering the game. Screensaver will also mess things up. You can however turn your monitor off if you wish.  
 
 ## Screenshots  
 

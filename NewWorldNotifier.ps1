@@ -499,14 +499,14 @@ function NewWorldNotifier {
         $NewWorldAlert = (Get-Ocr $path\NewWorldNotifier_Img.png).Text
 
     }
-    Until ($NewWorldAlert -notlike "*POSITION*")
+    Until ($NewWorldAlert -notmatch "POSITION|PLACE")
 
     if ($script:cancelLoop) {
         Return
     }
 
     # set messages
-    if ($NewWorldAlert -notlike "*POSITION*") {
+    if ($NewWorldAlert -notmatch "POSITION|PLACE") {
         $msg = "Game Time!"
     }
 
